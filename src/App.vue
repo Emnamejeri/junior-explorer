@@ -1,11 +1,25 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link> |
+    <router-link to="/learn">Learn</router-link> |
+    <router-link to="/practice">Practice</router-link> |
+    <router-link to="/account">Profile</router-link>
   </nav>
-  <router-view/>
+  <router-view />
+  <FooterSection />
 </template>
+<script lang="ts">
+import { defineComponent } from "vue";
+import FooterSection from "./components/FooterSection.vue"; // Adjust the path as needed
 
+export default defineComponent({
+  name: "App",
+  components: {
+    FooterSection,
+  },
+});
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

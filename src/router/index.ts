@@ -8,32 +8,40 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView,
   },
   {
-    path: "/about",
-    name: "about",
-
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
-  },
-  {
     path: "/learn",
     name: "learn",
 
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/LearningView.vue"),
+    component: () => import("../views/LearningView.vue"),
   },
   {
     path: "/practice",
     name: "practice",
 
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/PracticeView.vue"),
+    component: () => import("../views/PracticeView.vue"),
   },
   {
     path: "/profile",
     name: "profile",
 
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/ProfileView.vue"),
+    component: () => import("../views/ProfileView.vue"),
+  },
+  {
+    path: "/learn/periodictable",
+    name: "Periodic Table",
+
+    component: () => import("../components/PeriodicTable.vue"),
+  },
+  {
+    path: "/learn/labtools",
+    name: "Lab Tools",
+
+    component: () => import("../components/LabTools.vue"),
+  },
+  {
+    path: "/learn/chemistryfacts",
+    name: "Fun Facts",
+
+    component: () => import("../components/FactsGenerator.vue"),
   },
 ];
 

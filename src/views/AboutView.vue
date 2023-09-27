@@ -20,17 +20,16 @@
 
 .header {
   font-size: 36px;
-  color: #3498db; /* Blue color for the header */
+  color: #3498db;
   margin-bottom: 20px;
 }
 
 .description {
   font-size: 20px;
-  color: #333; /* Dark gray color for the description */
+  color: #333;
   line-height: 1.5;
 }
 
-/* Add some child-friendly styles */
 .about img {
   max-width: 100%;
   height: auto;
@@ -43,12 +42,12 @@
 }
 
 .about a {
-  color: #e74c3c; /* Red color for links */
+  color: #e74c3c;
   text-decoration: underline;
   transition: color 0.3s;
 }
 
 .about a:hover {
-  color: #c0392b; /* Darker red color on hover */
+  color: #c0392b;
 }
 </style>

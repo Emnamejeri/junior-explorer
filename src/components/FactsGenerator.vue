@@ -1,10 +1,5 @@
 <template>
-  <nav>
-    <router-link to="/learn/periodictable">Periodic Table</router-link> |
-    <router-link to="/learn/labtools">Lab Tools</router-link> |
-    <router-link to="/learn/chemistryfacts">Fun Facts</router-link>
-  </nav>
-  <router-view />
+  <NavigationSection />
   <div class="container">
     <div class="circle-container">
       <button class="circle-button" @click="nextFact">
@@ -92,7 +87,7 @@ export default defineComponent({
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Center vertically on the screen */
+  height: 100vh;
 }
 
 .circle-container {
@@ -139,10 +134,9 @@ export default defineComponent({
   background-color: #0056b3;
 }
 
-/* Style the Font Awesome icon */
 .atom-button .svg-inline--fa {
-  margin-right: 5px; /* Add some spacing between the icon and text if needed */
+  margin-right: 5px;
   font-size: 18px;
-  color: white; /* Adjust the icon size as desired */
+  color: white;
 }
 </style>

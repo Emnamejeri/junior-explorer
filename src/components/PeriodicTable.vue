@@ -1,9 +1,6 @@
 <template>
-  <nav>
-    <router-link to="/learn/periodictable">Periodic Table</router-link> |
-    <router-link to="/learn/labtools">Lab Tools</router-link> |
-    <router-link to="/learn/chemistryfacts">Fun Facts</router-link>
-  </nav>
+  <NavigationSection />
+
   <router-view />
   <div class="container">
     <h1>Important Elements for Kids</h1>

@@ -1,11 +1,30 @@
 <template>
   <div class="about">
-    <h1 class="header">Junior Explorer</h1>
     <p class="description">
-      The educational platform that sparks kids' interest in chemistry and labs.
+      The educational platform that sparks kids' interest in chemistry and
+      labs.<br />
       Our app offers interactive lessons, hands-on experiments, and captivating
       animations to make learning chemistry fun and educational.
     </p>
+  </div>
+  <div class="image-container">
+    <div class="card-columns">
+      <div
+        v-for="(card, index) in cards"
+        :key="index"
+        class="card"
+        style="width: 18rem; height: 300px"
+      >
+        <img
+          :src="card.imagePath"
+          :alt="'child tablet ' + index"
+          class="card-img-top responsive-image"
+        />
+        <div class="card-body">
+          <p class="card-text">{{ card.text }}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -16,50 +35,86 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.header {
-  font-size: 36px;
-  color: #3498db; /* Blue color for the header */
-  margin-bottom: 20px;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .description {
   font-size: 20px;
-  color: #333; /* Dark gray color for the description */
+  color: #333;
   line-height: 1.5;
 }
-
-/* Add some child-friendly styles */
-.about img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 20px;
-  border-radius: 10px;
+.card-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  grid-gap: 20px;
 }
 
-.about p {
-  margin-top: 20px;
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  height: 100%;
+  margin: 2em;
 }
 
-.about a {
-  color: #e74c3c; /* Red color for links */
-  text-decoration: underline;
-  transition: color 0.3s;
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
-
-.about a:hover {
-  color: #c0392b; /* Darker red color on hover */
+.card:hover {
+  transform: scale(1.05);
+}
+.card-text {
+  padding: 10px;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive;
+  font-weight: bold;
 }
 </style>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
+import { defineComponent, ref } from "vue";
 
-@Options({
-  components: {
-    // Remove HelloWorld if it's not used in this component
+export default defineComponent({
+  setup() {
+    const cards = ref([
+      {
+        imagePath: require("@/assets/image1.jpg"),
+        text: "Explore",
+      },
+      {
+        imagePath: require("@/assets/image2.jpg"),
+        text: "Discover",
+      },
+      {
+        imagePath: require("@/assets/image3.jpg"),
+        text: "Investigate",
+      },
+      {
+        imagePath: require("@/assets/image4.jpg"),
+        text: "Wonder",
+      },
+      {
+        imagePath: require("@/assets/image5.jpg"),
+        text: "Experiment",
+      },
+      {
+        imagePath: require("@/assets/image6.jpg"),
+        text: "Observe",
+      },
+      {
+        imagePath: require("@/assets/image7.jpg"),
+        text: "Analyze",
+      },
+    ]);
+
+    return {
+      cards,
+    };
   },
-})
-export default class HomeView extends Vue {}
+});
 </script>

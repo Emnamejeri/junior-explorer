@@ -1,10 +1,6 @@
 <template>
-  <nav>
-    <router-link to="/learn/periodictable">Periodic Table</router-link> |
-    <router-link to="/learn/labtools">Lab Tools</router-link> |
-    <router-link to="/learn/chemistryfacts">Fun Facts</router-link>
-  </nav>
-  <router-view />
+  <NavigationSection />
+
   <div class="card-container">
     <div v-for="index in 8" :key="index" class="card" style="width: 18rem">
       <img class="card-img-top" :src="imageSrc" :alt="altText" />

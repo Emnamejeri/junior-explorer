@@ -6,7 +6,7 @@
         <router-link to="/">Home</router-link>
         <router-link to="/learn">Learn</router-link>
         <router-link to="/practice">Practice</router-link>
-        <router-link to="/account">Profile</router-link>
+        <router-link to="/profile">Profile</router-link>
       </div>
     </nav>
   </header>

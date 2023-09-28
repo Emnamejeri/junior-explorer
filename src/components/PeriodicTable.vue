@@ -1,7 +1,12 @@
 <template>
   <NavigationSection />
-
+  <nav>
+    <router-link to="/learn/periodictable">Periodic Table</router-link> |
+    <router-link to="/learn/labtools">Lab Tools</router-link> |
+    <router-link to="/learn/chemistryfacts">Fun Facts</router-link>
+  </nav>
   <router-view />
+
   <div class="container">
     <h1>Important Elements for Kids</h1>
     <div class="element-container">
@@ -15,7 +20,6 @@
       </div>
     </div>
 
-    <!-- Pop-up -->
     <div v-if="popupVisible" class="popup">
       <div class="popup-content">
         <p>{{ popupMessage }}</p>
@@ -144,5 +148,30 @@ const closePopup = (): void => {
 
 .popup button:hover {
   background-color: #007e6d;
+}
+
+nav {
+  text-align: center;
+  background-color: #e0f2f1;
+  padding: 20px;
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #009688;
+  font-size: 18px;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #e0f2f1;
+  transition: background-color 0.3s ease;
+  font-family: "Comic Sans MS", cursive;
+}
+
+nav a:hover {
+  background-color: #009688;
+  color: white;
 }
 </style>

@@ -19,10 +19,9 @@ export default {
 </script>
 
 <style scoped>
-/* Updated styles for the Navbar */
 .navbar {
-  background-color: #ffe6f0; /* Light pink background */
-  color: #ff69b4; /* Hot pink text color */
+  background-color: #ffe6f0;
+  color: #ff69b4;
   font-weight: bold;
   padding: 10px;
   display: flex;
@@ -33,21 +32,21 @@ export default {
 
 .nav-left {
   font-weight: bold;
-  font-size: 1.5rem; /* Larger font size */
-  font-family: "Comic Sans MS", cursive; /* Playful font */
-  color: #3399cc; /* Hot pink text color */
+  font-size: 1.5rem;
+  font-family: "Comic Sans MS", cursive;
+  color: #3399cc;
 }
 
 .nav-right a {
-  color: #3399cc; /* Deep pink link color */
+  color: #3399cc;
   text-decoration: none;
-  font-size: 18px; /* Larger font size */
+  font-size: 18px;
   transition: color 0.3s ease;
-  font-family: "Comic Sans MS", cursive; /* Playful font */
-  margin-right: 20px; /* Add spacing between router links */
+  font-family: "Comic Sans MS", cursive;
+  margin-right: 20px;
 }
 
 .nav-right a:hover {
-  color: #ff007f; /* Darker pink on hover */
+  color: #ff007f;
 }
 </style>

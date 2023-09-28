@@ -1,14 +1,17 @@
 <template>
   <NavigationSection />
+  <nav>
+    <router-link to="/learn/periodictable">Periodic Table</router-link> |
+    <router-link to="/learn/labtools">Lab Tools</router-link> |
+    <router-link to="/learn/chemistryfacts">Fun Facts</router-link>
+  </nav>
+  <router-view />
   <div class="container">
     <div class="circle-container">
       <button class="circle-button" @click="nextFact">
         {{ currentFact }}
       </button>
     </div>
-    <button class="atom-button" @click="nextFact">
-      <i class="fa-light fa-atom"></i>
-    </button>
   </div>
 </template>
 
@@ -87,20 +90,27 @@ export default defineComponent({
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 50vh;
+  margin-top: 15vh;
 }
 
 .circle-container {
   position: relative;
+  background-color: #e0f2f1;
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
 }
 
 .circle-button {
-  width: 350px;
-  height: 350px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   font-size: 18px;
-  background-color: #4caf50;
-  color: #fff;
+  font-family: "Comic Sans MS", cursive;
+  background-color: #e0f2f1;
+  color: #009688;
   border: none;
   cursor: pointer;
   display: flex;
@@ -108,35 +118,38 @@ export default defineComponent({
   justify-content: center;
   outline: none;
   transition: background-color 0.3s;
+  position: relative;
+  z-index: 6;
+  overflow: hidden;
 }
 
 .circle-button:hover {
-  background-color: #45a049;
-}
-
-.atom-button {
-  margin-top: 10px;
-  background-color: #007bff;
+  background-color: #009688;
   color: #fff;
-  border: none;
-  cursor: pointer;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  outline: none;
-  transition: background-color 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.atom-button:hover {
-  background-color: #0056b3;
+nav {
+  text-align: center;
+  background-color: #e0f2f1;
+  padding: 20px;
+  margin-top: 2em;
+  margin-bottom: 4em;
 }
 
-.atom-button .svg-inline--fa {
-  margin-right: 5px;
+nav a {
+  text-decoration: none;
+  color: #009688;
   font-size: 18px;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #e0f2f1;
+  transition: background-color 0.3s ease;
+  font-family: "Comic Sans MS", cursive;
+}
+
+nav a:hover {
+  background-color: #009688;
   color: white;
 }
 </style>

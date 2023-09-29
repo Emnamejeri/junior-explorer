@@ -5,24 +5,17 @@
   </nav>
   <router-view />
   <div class="container">
-    <h1>Hey There, Curious Minds!</h1>
+    <h2>Get ready to dive into our amazing world of games!</h2>
     <p>
-      We're super excited to introduce you to our brand new
-      <b> Practice Zone </b> the perfect place for you to put your knowledge to
-      the test and <b>sharpen</b> those awesome skills you've been acquiring on
-      your learning journey.
+      Our game section is like a treasure chest filled with fun adventures and
+      challenges. You can explore exciting quests, solve puzzles, and have a
+      fantastic time while leveling up your skills. Play, learn, and conquer all
+      while having a blast in our game zone!
     </p>
-    <p>
-      Here, you get to be the star of your own <b>learning adventure</b>.
-      Whether you've been exploring math, science, languages, or any other
-      exciting subjects, this is where you get to show off what you know and
-      discover even more along the way.
-    </p>
-    <p>
-      Start by choosing <b>Quiz</b> or <b>Game</b> to practice your knowledge
-    </p>
+    <button class="start-button">Start The Game</button>
   </div>
 </template>
+
 <style scoped>
 body {
   font-family: Arial, sans-serif;
@@ -30,7 +23,7 @@ body {
   text-align: center;
 }
 
-h1 {
+h2 {
   color: #0078d4;
 }
 
@@ -46,6 +39,11 @@ p {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 nav {
   text-align: center;
@@ -70,5 +68,21 @@ nav a {
 nav a:hover {
   background-color: #009688;
   color: white;
+}
+.start-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0078d4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.start-button:hover {
+  background-color: #0058a3;
 }
 </style>

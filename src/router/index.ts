@@ -43,6 +43,18 @@ const routes: Array<RouteRecordRaw> = [
 
     component: () => import("../components/FactsGenerator.vue"),
   },
+  {
+    path: "/practice/quiz",
+    name: "quiz",
+
+    component: () => import("../components/QuizSection.vue"),
+  },
+  {
+    path: "/practice/game",
+    name: "game",
+
+    component: () => import("../components/GameSection.vue"),
+  },
 ];
 
 const router = createRouter({

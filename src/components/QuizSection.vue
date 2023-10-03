@@ -1,4 +1,9 @@
 <template>
+  <nav>
+    <router-link to="/practice/quiz">The Quiz</router-link> |
+    <router-link to="/practice/game">The Game</router-link>
+  </nav>
+  <router-view />
   <div class="page-container">
     <div v-if="showIntroText" class="container">
       <h2>Welcome to our exciting Quiz!</h2>
@@ -251,7 +256,30 @@ body {
   align-items: center;
   justify-content: center;
 }
+nav {
+  text-align: center;
+  background-color: #e0f2f1;
+  padding: 20px;
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
 
+nav a {
+  text-decoration: none;
+  color: #009688;
+  font-size: 18px;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #e0f2f1;
+  transition: background-color 0.3s ease;
+  font-family: "Comic Sans MS", cursive;
+}
+
+nav a:hover {
+  background-color: #009688;
+  color: white;
+}
 .quiz-section {
   padding: 1em;
   background-color: #fff;

@@ -11,7 +11,7 @@
       v-for="(card, index) in cards"
       :key="index"
       class="card"
-      style="width: 18rem"
+      style="width: 16rem"
     >
       <img class="card-img-top" :src="card.imagePath" />
       <div class="card-body">
@@ -83,6 +83,8 @@ export default {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
+  height: 70vh;
+  overflow-y: auto;
 }
 
 .card {
@@ -135,12 +137,15 @@ nav {
   padding: 20px;
   margin-top: 2em;
   margin-bottom: 4em;
+  border-radius: 10px;
 }
 
 nav a {
   text-decoration: none;
-  color: #009688;
-  font-size: 18px;
+  color: #3399cc;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Comic Sans MS", cursive;
   margin: 0 10px;
   padding: 10px 20px;
   border-radius: 25px;

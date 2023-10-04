@@ -18,46 +18,52 @@
 </template>
 
 <style scoped>
+body {
+  margin: 0;
+  padding-bottom: 80px;
+}
+
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 3rem;
-  background-color: #ffe6f0;
+  background-color: #e0f2f1;
   color: #3399cc;
   font-weight: bold;
   padding: 10px;
-  margin-bottom: 1vh;
-  text-align: center;
-  border-radius: 10px;
-}
-.footer-content {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  margin: 1em;
 }
 
-#social-icons {
-  order: 1;
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 2em);
+}
+
+.footer-text {
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: "Comic Sans MS", cursive;
 }
 
 #social-icons a {
-  margin: 0 10px;
-  font-size: 24px;
+  color: #3399cc;
   text-decoration: none;
+  font-size: 24px;
   transition: color 0.3s ease;
-  color: #3e82a4;
+  font-family: "Comic Sans MS", cursive;
+  margin: 0 10px;
 }
 
 #social-icons a:hover {
-  color: #0055a4;
-}
-
-#footer-text {
-  order: 2;
-  text-align: right;
+  color: #ff007f;
 }
 </style>
 

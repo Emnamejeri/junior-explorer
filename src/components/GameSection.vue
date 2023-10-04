@@ -4,7 +4,7 @@
     <router-link to="/practice/game">The Game</router-link>
   </nav>
   <router-view />
-  <div class="container">
+  <div v-if="!gameStarted" class="container">
     <h2>Get ready to dive into our amazing world of games!</h2>
     <p>
       Our game section is like a treasure chest filled with fun adventures and
@@ -12,9 +12,9 @@
       fantastic time while leveling up your skills. Play, learn, and conquer all
       while having a blast in our game zone!
     </p>
-    <button class="start-button">Start The Game</button>
+    <button class="start-button" @click="startGame">Start The Game</button>
   </div>
-  <div class="card" style="width: 18rem" v-if="currentCard">
+  <div class="card" style="width: 18rem" v-if="gameStarted && currentCard">
     <img
       class="card-img-top"
       :src="currentCard.imageSrc"
@@ -69,13 +69,13 @@ export default defineComponent({
         question: "Is this the molecule of Water?",
         correctAnswer: true,
         displayedMessage: "This is H2O the water molecule",
-        imageSrc: require("@/assets/lab2.jpg"),
+        imageSrc: require("@/assets/game2.jpg"),
       },
       {
         question: "Is this the chemical symbol of Uranium?",
         correctAnswer: false,
         displayedMessage: "This is the symbol of Potassium (K)",
-        imageSrc: require("@/assets/lab1.jpg"),
+        imageSrc: require("@/assets/game3.png"),
       },
       {
         question: "Is this a Pipette?",
@@ -87,62 +87,66 @@ export default defineComponent({
         question: "Is this the chemical symbol for Gold?",
         correctAnswer: true,
         displayedMessage: "This is the symbol of Gold (Au)",
-        imageSrc: require("@/assets/lab1.jpg"),
+        imageSrc: require("@/assets/game5.png"),
       },
       {
         question: "Is this the formula for Carbon Dioxide?",
         correctAnswer: true,
         displayedMessage: "This is CO2, the formula for Carbon Dioxide",
-        imageSrc: require("@/assets/lab1.jpg"),
+        imageSrc: require("@/assets/game6.png"),
       },
       {
         question: "Is this a picture of a Neutron?",
         correctAnswer: false,
         displayedMessage: "This is a picture of a Proton",
-        imageSrc: require("@/assets/lab1.jpg"),
+        imageSrc: require("@/assets/game7.jpg"),
       },
       {
-        question: require("@/assets/lab1.jpg"),
-        correctAnswer: true,
+        question: "Is this an image of Maxwell Equations?",
+        correctAnswer: false,
         displayedMessage: "This is the Pythagorean theorem",
-        imageSrc: require("@/assets/lab1.jpg"),
+        imageSrc: require("@/assets/game8.png"),
       },
       {
         question: "Is this an image of a Bunsen Burner?",
         correctAnswer: false,
         displayedMessage: "This is an image of a Florence Flask",
-        imageSrc: require("@/assets/lab1.jpg"),
+        imageSrc: require("@/assets/game9.jpg"),
       },
       {
         question: "Is this the element Iron represented?",
         correctAnswer: true,
         displayedMessage: "This is the symbol for Iron (Fe)",
-        imageSrc: require("@/assets/lab1.jpg"),
+        imageSrc: require("@/assets/game10.jpg"),
       },
       {
         question: "Is this a diagram of the Human Heart?",
         correctAnswer: false,
         displayedMessage: "This is a diagram of the Human Brain",
-        imageSrc: require("@/assets/lab1.jpg"),
+        imageSrc: require("@/assets/game11.png"),
       },
       {
         question: "Is this a chemical element in the periodic table?",
         correctAnswer: true,
         displayedMessage: "This is Azote (N)",
-        imageSrc: require("@/assets/lab1.jpg"),
+        imageSrc: require("@/assets/game12.png"),
       },
       {
         question: "Is this the structural formula for Methane?",
         correctAnswer: true,
         displayedMessage: "This is CH4, the structural formula for Methane",
-        imageSrc: require("@/assets/lab1.jpg"),
+        imageSrc: require("@/assets/game13.jpeg"),
       },
     ];
 
     const currentIndex = ref(0);
     const incorrectIndices = ref<number[]>([]);
     const feedbackMessage = ref<string | null>(null);
+    const gameStarted = ref(false);
 
+    const startGame = () => {
+      gameStarted.value = true;
+    };
     const currentCard = computed(() => {
       return cards[currentIndex.value];
     });
@@ -172,7 +176,13 @@ export default defineComponent({
       }, 5000); // Set the delay between cards to 5 secs
     };
 
-    return { currentCard, handleButtonClick, feedbackMessage };
+    return {
+      currentCard,
+      handleButtonClick,
+      feedbackMessage,
+      gameStarted,
+      startGame,
+    };
   },
 });
 </script>
@@ -233,7 +243,7 @@ body {
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: #009688 !important;
   color: white;
 }
 
@@ -253,12 +263,15 @@ nav {
   padding: 20px;
   margin-top: 2em;
   margin-bottom: 4em;
+  border-radius: 10px;
 }
 
 nav a {
   text-decoration: none;
-  color: #009688;
-  font-size: 18px;
+  color: #3399cc;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Comic Sans MS", cursive;
   margin: 0 10px;
   padding: 10px 20px;
   border-radius: 25px;
@@ -275,7 +288,7 @@ nav a:hover {
 .start-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #0078d4;
+  background-color: #009688 !important;
   color: #fff;
   border: none;
   border-radius: 25px;
@@ -283,9 +296,5 @@ nav a:hover {
   cursor: pointer;
   transition: background-color 0.3s;
   margin-top: 20px;
-}
-
-.start-button:hover {
-  background-color: #0058a3;
 }
 </style>

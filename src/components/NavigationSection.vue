@@ -20,8 +20,7 @@ export default {
 
 <style scoped>
 .navbar {
-  background-color: #ffe6f0;
-  color: #ff69b4;
+  background-color: #e0f2f1;
   font-weight: bold;
   padding: 10px;
   display: flex;
@@ -40,7 +39,8 @@ export default {
 .nav-right a {
   color: #3399cc;
   text-decoration: none;
-  font-size: 18px;
+  font-weight: bold;
+  font-size: 1.2em;
   transition: color 0.3s ease;
   font-family: "Comic Sans MS", cursive;
   margin-right: 20px;

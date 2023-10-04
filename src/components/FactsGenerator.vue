@@ -134,12 +134,15 @@ nav {
   padding: 20px;
   margin-top: 2em;
   margin-bottom: 4em;
+  border-radius: 10px;
 }
 
 nav a {
   text-decoration: none;
-  color: #009688;
-  font-size: 18px;
+  color: #3399cc;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Comic Sans MS", cursive;
   margin: 0 10px;
   padding: 10px 20px;
   border-radius: 25px;

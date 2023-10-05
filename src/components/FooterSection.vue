@@ -20,7 +20,10 @@
 <style scoped>
 body {
   margin: 0;
-  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 4em;
 }
 
 .footer {
@@ -37,7 +40,6 @@ body {
   left: 0;
   right: 0;
   box-sizing: border-box;
-  margin: 1em;
 }
 
 .footer-content {
@@ -47,18 +49,11 @@ body {
   width: calc(100% - 2em);
 }
 
-.footer-text {
-  font-weight: bold;
-  font-size: 1.5rem;
-  font-family: "Comic Sans MS", cursive;
-}
-
 #social-icons a {
   color: #3399cc;
   text-decoration: none;
   font-size: 24px;
   transition: color 0.3s ease;
-  font-family: "Comic Sans MS", cursive;
   margin: 0 10px;
 }
 

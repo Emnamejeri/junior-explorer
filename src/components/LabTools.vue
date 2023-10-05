@@ -11,7 +11,7 @@
       v-for="(card, index) in cards"
       :key="index"
       class="card"
-      style="width: 16rem"
+      style="width: 15rem"
     >
       <img class="card-img-top" :src="card.imagePath" />
       <div class="card-body">
@@ -81,7 +81,7 @@ export default {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 20px;
   height: 70vh;
   overflow-y: auto;

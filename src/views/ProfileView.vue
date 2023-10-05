@@ -43,10 +43,11 @@ export default {
 <style scoped>
 .profile-container {
   text-align: center;
-  background-color: #f0f8f7; /* Very light shade of #009688 */
+  background-color: #f0f8f7;
   padding: 20px;
   border-radius: 10px;
-  color: #009688; /* Text color matches the button color */
+  color: #009688;
+  margin-top: 3em;
 }
 
 h2 {
@@ -55,8 +56,8 @@ h2 {
 }
 
 .profile-form {
-  max-width: 400px; /* Limit the form width for better readability */
-  margin: 0 auto; /* Center the form horizontally */
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .form-group {
@@ -73,7 +74,7 @@ input[type="password"] {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 2px solid #009688; /* Add a border for better visibility */
+  border: 2px solid #009688;
   border-radius: 5px;
   margin-top: 5px;
 }
@@ -91,12 +92,12 @@ button {
 .login-button {
   background-color: #009688;
   color: white;
-  transition: background-color 0.3s, color 0.3s; /* Add a transition for smooth hover effect */
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .login-button:hover {
-  background-color: #007566; /* Change the background color on hover */
-  color: white; /* Change the text color on hover */
+  background-color: #007566;
+  color: white;
 }
 
 .create-account-button {
@@ -105,14 +106,11 @@ button {
   border: 2px solid #009688;
 }
 
-/* Add hover styles to make it more interactive for children */
-
 .create-account-button:hover {
   background-color: #009688;
   color: white;
 }
 
-/* Add a little animation to the buttons for fun */
 .login-button,
 .create-account-button {
   transition: background-color 0.3s, color 0.3s;

@@ -161,7 +161,7 @@ export default defineComponent({
 
       setTimeout(() => {
         feedbackMessage.value = null;
-        // Logic to determine next card
+        // Logic to determine next card displayed
         if (incorrectIndices.value.length > 0 && !isCorrect) {
           const shiftedValue = incorrectIndices.value.shift();
           if (typeof shiftedValue === "number") {

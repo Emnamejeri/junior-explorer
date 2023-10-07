@@ -1,8 +1,8 @@
 <template>
   <NavigationSection />
   <nav>
-    <router-link to="/learn/periodictable">Periodic Table</router-link> |
-    <router-link to="/learn/labtools">Lab Tools</router-link> |
+    <router-link to="/learn/periodictable">Periodic Table</router-link>
+    <router-link to="/learn/labtools">Lab Tools</router-link>
     <router-link to="/learn/chemistryfacts">Fun Facts</router-link>
   </nav>
   <router-view />
@@ -95,6 +95,30 @@ const closePopup = (): void => {
   justify-content: center;
   gap: 10px;
 }
+h1 {
+  font-family: "Arial", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #009688;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #009688;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 .element-box {
   width: 100px;
@@ -164,17 +188,88 @@ nav a {
   color: #3399cc;
   font-weight: bold;
   font-size: 1rem;
-  font-family: "Comic Sans MS", cursive;
   margin: 0 10px;
   padding: 10px 20px;
   border-radius: 25px;
   background-color: #e0f2f1;
   transition: background-color 0.3s ease;
-  font-family: "Comic Sans MS", cursive;
 }
 
 nav a:hover {
   background-color: #009688;
   color: white;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h1::after {
+    width: 60px;
+  }
+  .element-box {
+    width: 90px;
+    height: 90px;
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .element-box {
+    width: 80px;
+    height: 80px;
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+    padding-top: 8px;
+  }
+
+  h1::after {
+    width: 50px;
+  }
+
+  nav {
+    padding: 15px;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .element-box {
+    width: 70px;
+    height: 70px;
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    padding-top: 6px;
+  }
+
+  h1::after {
+    width: 40px;
+  }
+  nav {
+    padding: 10px;
+  }
+
+  nav a {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+  }
 }
 </style>

@@ -34,11 +34,6 @@
     </form>
   </div>
 </template>
-<script lang="ts">
-export default {
-  name: "ProfileView",
-};
-</script>
 
 <style scoped>
 .profile-container {
@@ -48,56 +43,57 @@ export default {
   border-radius: 10px;
   color: #009688;
   margin-top: 3em;
+  max-width: 100%;
 }
 
 h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 2em;
+  margin-bottom: 1em;
 }
 
 .profile-form {
-  max-width: 400px;
+  width: 80%;
   margin: 0 auto;
 }
 
 .form-group {
-  margin: 10px 0;
+  margin: 1em 0;
 }
 
 label {
-  font-size: 16px;
+  display: block;
+  font-size: 1em;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  width: 100%;
+  width: calc(100% - 20px);
   padding: 10px;
-  font-size: 16px;
+  font-size: 1em;
   border: 2px solid #009688;
   border-radius: 5px;
-  margin-top: 5px;
+  margin: 10px 0;
+  display: block;
 }
 
 button {
-  width: 100%;
+  width: calc(100% - 20px);
   padding: 10px;
-  font-size: 18px;
+  font-size: 1.2em;
   border: none;
   border-radius: 5px;
-  margin-top: 10px;
+  margin-top: 1em;
   cursor: pointer;
 }
 
 .login-button {
   background-color: #009688;
   color: white;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 .login-button:hover {
   background-color: #007566;
-  color: white;
 }
 
 .create-account-button {
@@ -111,8 +107,44 @@ button {
   color: white;
 }
 
-.login-button,
-.create-account-button {
-  transition: background-color 0.3s, color 0.3s;
+@media only screen and (max-width: 768px) {
+  .profile-form {
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h2 {
+    font-size: 1.5em;
+  }
+
+  label {
+    font-size: 0.9em;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  button {
+    width: calc(100% - 10px);
+  }
+
+  button {
+    font-size: 1em;
+  }
+
+  .form-group {
+    margin: 0.5em 0;
+  }
 }
 </style>
+
+<script lang="ts">
+export default {
+  name: "ProfileView",
+};
+</script>

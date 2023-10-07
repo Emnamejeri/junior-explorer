@@ -18,35 +18,31 @@
 </template>
 
 <style scoped>
-body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding-bottom: 4em;
-}
-
 .footer {
   background-color: #e0f2f1;
   color: #3399cc;
   font-weight: bold;
   padding: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  text-align: center;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  box-sizing: border-box;
 }
 
 .footer-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: calc(100% - 2em);
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
 #social-icons a {
@@ -59,6 +55,21 @@ body {
 
 #social-icons a:hover {
   color: #ff007f;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-content p {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  #social-icons a {
+    font-size: 20px;
+  }
 }
 </style>
 

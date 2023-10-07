@@ -329,6 +329,9 @@ label {
 .wrong-answer {
   color: #ff0000;
 }
+.quiz-results {
+  margin-bottom: 2em;
+}
 
 @media (max-width: 600px) {
   .page-container,
@@ -336,6 +339,10 @@ label {
   .quiz-results {
     padding: 0.5em;
     margin: 0.5em;
+  }
+
+  .quiz-results {
+    margin-bottom: 1em;
   }
 
   h2,
@@ -348,6 +355,12 @@ label {
   .start-button,
   .submit-button {
     font-size: 1.25em;
+  }
+}
+
+@media (min-width: 768px) {
+  .quiz-results {
+    margin-bottom: 2em;
   }
 }
 </style>

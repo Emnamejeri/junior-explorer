@@ -12,12 +12,6 @@
   </header>
 </template>
 
-<script lang="ts">
-export default {
-  name: "NavigationSection",
-};
-</script>
-
 <style scoped>
 .navbar {
   background-color: #e0f2f1;
@@ -27,6 +21,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
+  flex-wrap: wrap;
 }
 
 .nav-left {
@@ -49,4 +44,37 @@ export default {
 .nav-right a:hover {
   color: #ff007f;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-left,
+  .nav-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-right a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-left {
+    font-size: 1.2rem;
+  }
+
+  .nav-right a {
+    font-size: 1em;
+  }
+}
 </style>
+
+<script lang="ts">
+export default {
+  name: "NavigationSection",
+};
+</script>

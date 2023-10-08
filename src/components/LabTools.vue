@@ -1,8 +1,8 @@
 <template>
   <NavigationSection />
   <nav>
-    <router-link to="/learn/periodictable">Periodic Table</router-link> |
-    <router-link to="/learn/labtools">Lab Tools</router-link> |
+    <router-link to="/learn/periodictable">Periodic Table</router-link>
+    <router-link to="/learn/labtools">Lab Tools</router-link>
     <router-link to="/learn/chemistryfacts">Fun Facts</router-link>
   </nav>
   <router-view />
@@ -11,7 +11,7 @@
       v-for="(card, index) in cards"
       :key="index"
       class="card"
-      style="width: 15rem"
+      style="width: 13rem"
     >
       <img class="card-img-top" :src="card.imagePath" />
       <div class="card-body">
@@ -88,18 +88,22 @@ export default {
 }
 
 .card {
-  width: 18rem;
+  width: 100%;
+  max-width: 18rem;
   text-align: center;
   background-color: #e0f2f1;
   border: 2px solid #009688;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 
 .card img {
   width: 100%;
-  height: 29vh;
+  height: auto;
+  max-height: 29vh;
+  object-fit: cover;
 }
 
 .card-title {
@@ -151,11 +155,40 @@ nav a {
   border-radius: 25px;
   background-color: #e0f2f1;
   transition: background-color 0.3s ease;
-  font-family: "Comic Sans MS", cursive;
 }
 
 nav a:hover {
   background-color: #009688;
   color: white;
+}
+
+@media (max-width: 992px) {
+  nav a {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 15px;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  nav {
+    padding: 10px;
+  }
+
+  nav a {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+  }
 }
 </style>

@@ -103,7 +103,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 20px;
+  margin-bottom: 2em;
   padding-top: 10px;
   position: relative;
 }
@@ -200,10 +200,10 @@ nav a:hover {
   color: white;
 }
 
-/* Responsive Styling */
 @media (max-width: 992px) {
   h1 {
     font-size: 2rem;
+    margin-bottom: 2em;
   }
 
   h1::after {
@@ -228,8 +228,8 @@ nav a:hover {
     font-size: 16px;
   }
   h1 {
-    font-size: 1.75rem;
-    margin-bottom: 15px;
+    font-size: 1rem;
+    margin-bottom: 2em;
     padding-top: 8px;
   }
 
@@ -254,8 +254,8 @@ nav a:hover {
     font-size: 14px;
   }
   h1 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1rem;
+    margin-bottom: 2em;
     padding-top: 6px;
   }
 

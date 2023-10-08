@@ -1,8 +1,8 @@
 <template>
   <NavigationSection />
   <nav>
-    <router-link to="/learn/periodictable">Periodic Table</router-link> |
-    <router-link to="/learn/labtools">Lab Tools</router-link> |
+    <router-link to="/learn/periodictable">Periodic Table</router-link>
+    <router-link to="/learn/labtools">Lab Tools</router-link>
     <router-link to="/learn/chemistryfacts">Fun Facts</router-link>
   </nav>
   <router-view />
@@ -83,31 +83,44 @@ export default defineComponent({
   },
 });
 </script>
-
 <style scoped>
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 50vh;
-  margin-top: 15vh;
+  height: 100vh;
+  margin: 0;
+  padding-top: 2vh;
+  position: relative;
+}
+
+.container:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
 }
 
 .circle-container {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #e0f2f1;
   border-radius: 50%;
-  width: 350px;
-  height: 350px;
+  width: 50vw;
+  height: 50vw;
+  max-width: 350px;
+  max-height: 350px;
   overflow: hidden;
+  margin-top: -115px;
 }
 
 .circle-button {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  font-size: 18px;
+  font-size: 2vw;
   font-family: "Comic Sans MS", cursive;
   background-color: #e0f2f1;
   color: #009688;
@@ -118,9 +131,10 @@ export default defineComponent({
   justify-content: center;
   outline: none;
   transition: background-color 0.3s;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 6;
-  overflow: hidden;
 }
 
 .circle-button:hover {
@@ -131,9 +145,9 @@ export default defineComponent({
 nav {
   text-align: center;
   background-color: #e0f2f1;
-  padding: 20px;
-  margin-top: 2em;
-  margin-bottom: 4em;
+  padding: 10px;
+  margin-bottom: 1em;
+  margin-top: 1em;
   border-radius: 10px;
 }
 
@@ -143,16 +157,88 @@ nav a {
   font-weight: bold;
   font-size: 1rem;
   font-family: "Comic Sans MS", cursive;
-  margin: 0 10px;
-  padding: 10px 20px;
-  border-radius: 25px;
+  margin: 0 5px;
+  padding: 8px 12px;
+  border-radius: 15px;
   background-color: #e0f2f1;
   transition: background-color 0.3s ease;
-  font-family: "Comic Sans MS", cursive;
 }
 
 nav a:hover {
   background-color: #009688;
   color: white;
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding-top: 1vh;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .circle-button {
+    font-size: 3vw;
+  }
+
+  .circle-container {
+    width: 60vw;
+    height: 60vw;
+    max-width: none;
+    max-height: none;
+    margin-top: -100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-top: 1vh;
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    padding: 7px 10px;
+  }
+
+  .circle-button {
+    font-size: 4vw;
+  }
+
+  .circle-container {
+    width: 70vw;
+    height: 70vw;
+    margin-top: -20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-top: 0;
+  }
+
+  nav {
+    padding: 8px;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    display: block;
+    width: 80%;
+    margin: 5px auto;
+    padding: 7px 10px;
+  }
+
+  .circle-container {
+    width: 80vw;
+    height: 80vw;
+    border: 3px rgba(21, 197, 174, 0.637) solid;
+    margin-top: -200px;
+  }
 }
 </style>

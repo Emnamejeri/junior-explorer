@@ -13,7 +13,7 @@
         v-for="(card, index) in cards"
         :key="index"
         class="card"
-        style="width: 18rem; height: 300px"
+        style="width: 14rem; height: 300px"
       >
         <img
           :src="card.imagePath"

@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <router-link to="/practice/quiz">The Quiz</router-link> |
+    <router-link to="/practice/quiz">The Quiz</router-link>
     <router-link to="/practice/game">The Game</router-link>
   </nav>
   <router-view />

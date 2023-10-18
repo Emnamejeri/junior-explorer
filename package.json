@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
+    "test": "vitest",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -38,6 +38,6 @@
     "ts-jest": "^27.0.4",
     "typescript": "~4.5.5",
     "vite": "^4.4.9",
-    "vitest": "^0.34.5"
+    "vitest": "^0.34.6"
   }
 }

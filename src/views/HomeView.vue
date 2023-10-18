@@ -83,7 +83,7 @@ export default defineComponent({
   setup() {
     const cards = ref([
       {
-        imagePath: require("@/assets/image1.jpg"),
+        imagePath: require("@/assets/image1.png"),
         text: "Explore",
       },
       {
@@ -103,7 +103,7 @@ export default defineComponent({
         text: "Experiment",
       },
       {
-        imagePath: require("@/assets/image6.jpg"),
+        imagePath: require("@/assets/image6.png"),
         text: "Observe",
       },
       {

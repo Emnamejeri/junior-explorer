@@ -83,7 +83,7 @@ export default {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 20px;
-  height: 70vh;
+  height: auto;
   overflow-y: auto;
 }
 
@@ -101,9 +101,10 @@ export default {
 
 .card img {
   width: 100%;
-  height: auto;
+  height: 250px;
   max-height: 29vh;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .card-title {
@@ -140,7 +141,7 @@ nav {
   background-color: #e0f2f1;
   padding: 20px;
   margin-top: 2em;
-  margin-bottom: 4em;
+  margin-bottom: 1em;
   border-radius: 10px;
 }
 

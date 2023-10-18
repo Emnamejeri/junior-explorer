@@ -89,9 +89,9 @@ export default defineComponent({
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: auto;
   margin: 0;
-  padding-top: 2vh;
+  padding-top: 2vh 0;
   position: relative;
 }
 
@@ -238,7 +238,7 @@ nav a:hover {
     width: 80vw;
     height: 80vw;
     border: 3px rgba(21, 197, 174, 0.637) solid;
-    margin-top: -200px;
+    margin-top: -10px;
   }
 }
 </style>
